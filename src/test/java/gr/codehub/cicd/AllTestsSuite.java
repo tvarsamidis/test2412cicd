@@ -8,10 +8,10 @@ import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
-//@SelectClasses({
-//        SampleLoadTest.class,
-//        EmployeeTest.class,
-//})
+@SelectClasses({
+        SampleLoadTest.class,
+        EmployeeTest.class,
+})
 @SelectPackages("gr.codehub.cicd")
 @IncludeClassNamePatterns(".*Test")
 public class AllTestsSuite {
