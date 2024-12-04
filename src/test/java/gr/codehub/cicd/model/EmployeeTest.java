@@ -3,7 +3,6 @@ package gr.codehub.cicd.model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.security.cert.Extension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
