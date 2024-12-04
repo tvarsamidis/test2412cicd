@@ -15,7 +15,7 @@ public class EmployeeTest {
     }
 
     @Test
-    void shouldReturnCorrectId() {
+    void testShouldReturnCorrectId() {
         assertEquals(1, sampleEmployee.getId(), "Employee ID should match");
     }
 
