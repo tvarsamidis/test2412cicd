@@ -1,0 +1,38 @@
+package gr.codehub.cicd.model;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.security.cert.Extension;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class EmployeeTest {
+    private Employee sampleEmployee;
+
+    @BeforeEach
+    void setupBeforeEach() {
+        sampleEmployee = new Employee(1, "Alice", 60000);
+    }
+
+    @Test
+    void shouldReturnCorrectId() {
+        assertEquals(1, sampleEmployee.getId(), "Employee ID should match");
+    }
+
+    @Test
+    void shouldReturnCorrectName() {
+        assertEquals("Alice", sampleEmployee.getName(), "Employee name should match");
+    }
+
+    @Test
+    void shouldReturnCorrectSalary() {
+        assertEquals(60000, sampleEmployee.getSalary(), "Employee salary should match");
+    }
+
+    @Test
+    void shouldApply45PercentTaxOnSalariesAtLeast50000() {
+        double expectedTax = 60000 * 0.45;
+        assertEquals(expectedTax, sampleEmployee.getTaxAmount(), "Tax for salary >= 50000 should be 45%");
+    }
+}
