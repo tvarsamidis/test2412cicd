@@ -28,7 +28,7 @@ public class SampleLoadTest {
     void shouldSend10EmployeesToTheDatabase(){
         sampleLoad.loadSampleData();
         verify(dbServiceMock, atMostOnce()).clearDatabase();
-        verify(dbServiceMock, times(8)).saveEmployee(any());
+        verify(dbServiceMock, times(10)).saveEmployee(any());
 //        verify(dbServiceMock, atLeast(5)).saveEmployee(any());
 //        verify(dbServiceMock, atLeastOnce()).saveEmployee(any());
     }
